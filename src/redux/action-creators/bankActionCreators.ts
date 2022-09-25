@@ -6,7 +6,7 @@ export const deposit = (amount: number) => {
   return (dispatch: Dispatch<BankAction>) => {
     dispatch({
       type: BankActionType.DEPOSIT,
-      payload: !!amount ? amount : 0,
+      payload: amount,
     });
   };
 };
@@ -15,7 +15,7 @@ export const withdraw = (amount: number) => {
   return (dispatch: Dispatch<BankAction>) => {
     dispatch({
       type: BankActionType.WITHDRAW,
-      payload: !!amount ? amount : 0,
+      payload: amount,
     });
   };
 };
